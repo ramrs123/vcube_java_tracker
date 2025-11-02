@@ -4,22 +4,13 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<style type="text/css">
-	body {
-  background-image: url('./Vcube Logo.png'); 
-  background-repeat: no-repeat;            
-  background-size: cover;                  
-  background-position: center center;      
-}
+	<title>Java Tracker | VCube</title>
 
-	
-	</style>
 </head>
 <body>
 	<div class="main-div">
 
-		<form action="RegisterController" method="get">
+		<form action="register" method="get">
 			<input type="submit" name="submit" value="Join Now">
 
 		</form>

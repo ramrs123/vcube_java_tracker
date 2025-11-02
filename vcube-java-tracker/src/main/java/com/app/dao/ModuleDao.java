@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.app.model.ModuleModel;
-import com.app.utility.DBConnection2Modules;
+import com.app.utility.DBConnection;
 
 public class ModuleDao implements ModuleDaoInterface {
 
@@ -15,7 +15,7 @@ public class ModuleDao implements ModuleDaoInterface {
 	public List<ModuleModel> getAllModules() {
 		List<ModuleModel> modules = new ArrayList<>();
 		try {
-			Connection conn = DBConnection2Modules.getConnection();
+			Connection conn = DBConnection.getConnection();
 			String sql = "SELECT * FROM modules";
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();

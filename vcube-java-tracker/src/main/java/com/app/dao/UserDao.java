@@ -3,8 +3,6 @@ package com.app.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
-
 import com.app.model.UserModel;
 import com.app.utility.DBConnection;
 
@@ -15,7 +13,7 @@ public class UserDao implements UserDaoInterface {
 		boolean status = false;
 		try {
 			Connection con = DBConnection.getConnection();
-			System.out.println("---------->1");
+			
 			String query = "INSERT INTO users (firstName, lastName, userName, password, emailId, phoneNo) VALUES (?,?,?,?,?,?)";
 			PreparedStatement ps = con.prepareStatement(query);
 
@@ -75,21 +73,22 @@ public class UserDao implements UserDaoInterface {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setString(1, username);
 			ResultSet rs = ps.executeQuery();
-			
-			if(rs.next()) {
+
+			if (rs.next()) {
 				user = new UserModel();
-			user.setFirstName(rs.getString(2)); //3 6 7 
-			user.setLastName(rs.getString(3));
-			user.setEmailId(rs.getString(6));
-			user.setPhoneNo(rs.getString(7));
-			
+				user.setFirstName(rs.getString(2)); 
+				user.setLastName(rs.getString(3));
+				user.setEmailId(rs.getString(6));
+				user.setPhoneNo(rs.getString(7));
+
 			}
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 		return user;
-		
+
 	}
+
 
 }

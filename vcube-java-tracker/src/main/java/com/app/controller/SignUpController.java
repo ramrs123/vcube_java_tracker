@@ -14,7 +14,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/SignUpController")
+@WebServlet("/signup")
 public class SignUpController extends HttpServlet {
 
 	@Override

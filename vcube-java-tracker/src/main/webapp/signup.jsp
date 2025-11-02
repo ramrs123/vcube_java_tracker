@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="SignUpController" method="post">
+	<form action="signup" method="post">
 		<input type="text" id="fname" name="firstName" placeholder="First name" required>
 		<p id="p1"></p>
 		<input type="text" id="lname"name="lastName" placeholder="Last name" required>
@@ -17,7 +17,7 @@
 		<input type="text" id="phone"name="phoneNo" placeholder="Phone" required>
 		<button type = "submit" >Register</button>
 		<h2>Already a user?</h2>
-		<a href= "LoginController">Login</a>
+		<a href= "login">Login</a>
 
 	</form>
 	

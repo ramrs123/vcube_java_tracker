@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 
-@WebServlet("/RegisterController")
+@WebServlet("/register")
 public class RegisterController extends HttpServlet {
 //	private static final long serialVersionUID = 1L;
        
